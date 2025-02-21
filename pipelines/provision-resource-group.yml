@@ -11,15 +11,15 @@ stages:
         steps:          
           - task: AzurePowerShell@5
             inputs:
-              azureSubscription: 'serviceConnectionProjectDayBreak'
+              azureSubscription: 'serviceconnectionprojectdaybreak'
               ScriptType: 'FilePath'
               ScriptPath: '$(System.DefaultWorkingDirectory)/scripts/create-resource-group.ps1'
               ScriptArguments: '-location northeurope `
-                                -resourceGroupName "rg-404da-mktg-pdb-ne-dev-001" `
-                                -owner "Marketing" `
+                                -resourceGroupName "ydmlresources" `
+                                -owner "dinesh" `
                                 -costCenter "112245" `
                                 -application "Project Day Break" `
                                 -description "The latest AI to do AI things" `
-                                -repo "https://dev.azure.com/404DataAnalytics/Project%20Day%20Break/_git/pdb-provision-resource-groups"'
+                                -repo "https://yedladinesh3@dev.azure.com/yedladinesh3/Project%20Day%20Break/_git/pdb-provision-resource-groups.git"'
               FailOnStandardError: true
               azurePowerShellVersion: 'LatestVersion'
